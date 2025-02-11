@@ -1,7 +1,7 @@
 resource "azurerm_virtual_network" "pord-vnet" {
-  name = "prod-vnet"
+  name = "${local.resource_name_prefix}-vnet"
   address_space = ["10.${var.net["prod"]}.0.0/16"]
-  location = var.region
+  location = var.location
   resource_group_name = azurerm_resource_group.prod-rg.name
   tags = {
     "Application"= "app"
