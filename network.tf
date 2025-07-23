@@ -5,7 +5,7 @@ resource "azurerm_virtual_network" "pord-vnet" {
   resource_group_name = azurerm_resource_group.prod-rg.name
   tags = {
     "Application"= "app"
-    "Subscription" = "Prod"
+    "Subscription" = "nonProd"
   }
 }
 
